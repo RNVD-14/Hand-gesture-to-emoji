@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Detection System</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            background-color: #f8f9fa;
+            border-right: 2px solid #ddd;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+            display: block;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+            flex-grow: 1;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            document.getElementById('home').classList.add('hidden');
+            document.getElementById('about').classList.add('hidden');
+            document.getElementById(pageId).classList.remove('hidden');
+        }
+
+        window.onload = function() {
+            showPage('home'); // Show the home page by default
+        }
+    </script>
+</head>
+<body>
+    <header>
+        Emoji Detection System
+    </header>
+
+    <div style="display: flex; flex: 1;">
+        <nav>
+            <a href="javascript:void(0);" onclick="showPage('home')">Home</a>
+            <a href="javascript:void(0);" onclick="showPage('about')">About</a>
+        </nav>
+
+        <main>
+            <div id="home">
+                <h1>Run Emoji Detection Script</h1>
+                <form action="/run-script" method="post">
+                    <input type="submit" value="Run Script">
+                </form>
+            <!--
+                <h1>Upload Video for Emoji Detection</h1>
+                <form action="/upload-video" method="post" enctype="multipart/form-data">
+                    <input type="file" name="video_file" accept="video/*" required>
+                    <input type="submit" value="Upload Video">
+                </form>
+            -->
+            </div>
+
+            <div id="about" class="hidden">
+                <h1>About This Project</h1>
+                <p>
+                    Welcome to the Emoji Detection System! This application uses machine learning
+                    to detect and recognize emojis in real-time from video input. You can run a live
+                    detection script using your webcam or upload a video file to analyze emoji usage
+                    in that video. Our system utilizes a trained model to identify different emojis
+                    and display the detected emoji on the video feed.
+                </p>
+                <p>
+                    The project is designed to showcase real-time video processing and machine learning
+                    applications using TensorFlow, Keras, and OpenCV. We hope you find it useful and
+                    engaging!
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

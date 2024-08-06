@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Emoji Detection System</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            background-color: #f8f9fa;
+            border-right: 2px solid #ddd;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 18px;
+            display: block;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Emoji Detection System
+    </header>
+
+    <div style="display: flex; flex: 1;">
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+
+        <main>
+            <h1>About This Project</h1>
+            <p>
+                Welcome to the Emoji Detection System! This application uses machine learning
+                to detect and recognize emojis in real-time from video input. You can run a live
+                detection script using your webcam or upload a video file to analyze emoji usage
+                in that video. Our system utilizes a trained model to identify different emojis
+                and display the detected emoji on the video feed.
+            </p>
+            <p>
+                The project is designed to showcase real-time video processing and machine learning
+                applications using TensorFlow, Keras, and OpenCV. We hope you find it useful and
+                engaging!
+            </p>
+        </main>
+    </div>
+</body>
+</html>
